@@ -1,0 +1,111 @@
+body{
+  background-color: rgba(112, 107, 112, 0.966);
+}
+.background-image{
+  margin-left: 30px;
+  width: 1800px;
+  background-image: url(back.png)
+  ;
+  height: 1000px;
+}
+
+.heart {
+  position: relative;
+  opacity: 0.9 ;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 100px;
+  height: 150px;
+  border-radius: 50px 50px 0 0;
+  background: rgb(180, 6, 180);
+}
+
+.heart::before {
+  left: 100px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes vibrate {
+  0% { transform: translatey(0); }
+  20% { transform: translatey(-4px); }
+  40% { transform: translatey(4px); }
+  60% { transform: translatey(-4px); }
+  80% { transform: translatey(4px); }
+  100% { transform: translatey(0); }
+}
+
+.heart {
+  animation: vibrate 0.9s infinite;
+}
+
+.heart a{
+position:absolute;
+top: 90px;
+z-index: 2;
+left: 65px;
+color: white;
+text-decoration: none;
+}
+.heart p {
+  position:absolute;
+top: 180px;
+z-index: 2;
+left: 0px;
+line-height: 15px;
+text-wrap: wrap;
+width: 120px;
+color: white;
+text-decoration: none;
+}
+
+.auto-typing{
+  position: fixed;
+  top: 300px;
+  left: 300px;
+  right: 300px;
+}
+
+  .typing-container {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    background-color: rgba(128, 0, 128, 0.274);
+    color: white;
+    text-wrap: wrap;
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  .typing {
+    animation: blink 0.75s step-end infinite;
+  }
+
+  .auto-typing button{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(180, 6, 180);
+    background-image: url(sad-kawaii-face-free-png.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 75px;
+  }

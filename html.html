@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>For Someone Who I Love</title>
+    <link rel="stylesheet" href="css.css">
+  </head>
+
+  <body>
+    <div class="background-image">
+      <div class="heart"> 
+        <a  href="https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a?si=1e3363e5bef14216" target="_blank" >Click Me</a>
+        <p> Note : open it first then continue reading</p>
+      </div>
+      <div class="auto-typing">
+      <div class="typing-container" id="typing-text"></div>
+      <button id="start-button">Can I Talk ? </button>
+    </div>
+    </div>
+
+    <script>
+      const text = "Hey my beautiful kitty, first of all, I want to say that I really love you so much and I don’t love anything else in the whole world. I love you in all your moods and I understand them. But this time, I made a mistake. Please don't be mad at me. This time, I wasn't smart in what I did. I really understand you, I know you, and I appreciate everything about you because you are a blessing, and blessings should be appreciated. I really love you so much.I appreciate you always being by my side. You're my number one supporter, and I rely on you. I never want you to be away from me or take a break. I misjudged the situation, and I'm sorry for that. I understand my mistake.You are my first and last love. You are my beloved, my soul, my life, and my everything. may God keep you for me forever, my sweetie.";
+
+      let index = 0;
+    
+      function typeWriter() {
+        if (index < text.length) {
+          document.getElementById("typing-text").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+    
+      document.getElementById("start-button").addEventListener("click", () => {
+  document.getElementById("start-button").style.display = "none"; // Hide the button
+  document.getElementById("typing-text").innerHTML = ""; // Clear text before typing starts
+  index = 0; // Reset index
+  typeWriter(); // Start typing effect
+});
+    </script>
+  </body>
+</html>
